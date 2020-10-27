@@ -1,0 +1,97 @@
+
+body {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  text-align: center;
+  
+  max-width: 1000px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:
+    1fr
+    100px
+    200px;
+  grid-template-areas:
+    "header nav"
+    "aside section"
+    "footer footer"
+}
+
+
+header {
+    grid-area: header;
+    background-color: rgb(199, 99, 17);
+  
+} 
+   
+ 
+nav {
+  grid-area: nav;
+  background-color: rgb(255, 209, 172);
+
+} 
+ 
+aside {
+  grid-area: aside;
+  background-color: rgb(255, 158, 255);
+
+}
+ 
+section {
+  grid-area: section;
+  background-color: rgb(173, 28, 101);
+}
+
+#lista {
+  display: grid;
+  padding: 1rem;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 150px);
+  font-size: 20px;
+}
+
+#lista div {
+  height: 150px;
+  width: 180px;
+  background-color: rebeccapurple;
+  color: white;
+  margin: 1rem;
+
+}
+ 
+footer {
+  grid-area: footer;
+  background-color: rgb(170, 245, 151);
+  
+}
+ 
+@media (min-width: 600px) and (max-width: 1000px) {
+  body {
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: 150px
+      100px
+      1fr
+      100px;
+    grid-template-areas:
+    "header nav"
+    "aside section"
+    "footer footer"
+  }
+}
+
+
+@media (min-width: 1001px) {
+  body {
+    grid-template-columns: 1fr 800px ;
+    grid-template-rows: 200px
+      1fr
+      100px;
+    grid-template-areas:
+    "header nav"
+    "aside section"
+    "footer footer"
+  }
+}
