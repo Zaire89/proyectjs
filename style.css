@@ -1,0 +1,139 @@
+
+
+
+body {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows:
+    100px
+    auto
+    200px;
+  grid-template-areas:
+    "header nav"
+    "section section"
+    "footer footer"
+}
+
+
+header {
+    grid-area: header;
+    background-color: black;
+    display: inline-block;
+    justify-content: right;
+    opacity: 50%;
+    box-shadow: -3px 10px 12px -6px #000000;
+    font-size: large;
+
+} 
+
+h1, H2, h4, h5, p {
+  font-family: Open Sans Condensed;
+  font-weight: 300;
+}
+ 
+nav {
+  grid-area: nav;
+  background-color: black;
+  display: inline-block;
+  justify-content: right;
+  opacity: 50%;
+  box-shadow: -3px 10px 12px -6px #000000;
+  font-size: large;
+} 
+
+ul {
+  flex-direction: row;
+  display: inline-block;
+  justify-content: right;
+  justify-content: flex-end;
+  position: absolute;
+  font-family: Open Sans Condensed;
+  font-weight: 300;
+}
+ul li {
+  color: white;
+  display: inline-block;
+  margin-right: 8px;
+}
+ 
+section {
+  grid-area: section;
+  background-color: white;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#lista {
+  display: grid;
+  padding: 1rem;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 150px);
+  font-size: 20px;
+}
+
+#lista div {
+  height: 150px;
+  width: 180px;
+  background-color: white;
+  color: white;
+  margin: 1rem;
+
+}
+
+
+#compra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
+
+th {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  grid-area: footer;
+
+  
+}
+ 
+@media (min-width: 600px) and (max-width: 1000px) {
+  body {
+    grid-template-columns: 100px auto;
+    grid-template-rows: 150px
+      100px
+      1fr
+      100px;
+    grid-template-areas:
+    "header nav"
+    "section section"
+    "footer footer"
+  }
+}
+
+
+@media (min-width: 1001px) {
+  body {
+    grid-template-columns: 100px auto ;
+    grid-template-rows: 100px
+    auto
+    200px;
+    grid-template-areas:
+    "header nav"
+    "section section"
+    "footer footer"
+  }
+}
